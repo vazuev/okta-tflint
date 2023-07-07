@@ -16,8 +16,8 @@ type OktaPolicyNameRule struct {
 	min           int
 }
 
-// NewOktaPolicyNameRule returns a new rule
-func NewOktaPolicyNameRule() *OktaPolicyNameRule {
+// OktaAuthServerPolicyNameRule returns a new rule
+func OktaAuthServerPolicyNameRule() *OktaPolicyNameRule {
 	return &OktaPolicyNameRule{
 		resourceType:  "okta_auth_server_policy",
 		attributeName: "name",

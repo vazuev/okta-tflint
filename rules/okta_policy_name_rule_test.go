@@ -37,7 +37,7 @@ resource "okta_auth_server_policy" "auditlogservice_read" {
 }`,
 			Expected: helper.Issues{
 				{
-					Rule:    NewOktaPolicyNameRule(),
+					Rule:    OktaAuthServerPolicyNameRule(),
 					Message: "Name must be from 1 to 50 characters",
 					Range: hcl.Range{
 						Filename: "resource.tf",
@@ -55,7 +55,7 @@ resource "okta_auth_server_policy" "auditlogservice_read" {
 }`,
 			Expected: helper.Issues{
 				{
-					Rule:    NewOktaPolicyNameRule(),
+					Rule:    OktaAuthServerPolicyNameRule(),
 					Message: "Name must be from 1 to 50 characters",
 					Range: hcl.Range{
 						Filename: "resource.tf",
@@ -67,7 +67,7 @@ resource "okta_auth_server_policy" "auditlogservice_read" {
 		},
 	}
 
-	rule := NewOktaPolicyNameRule()
+	rule := OktaAuthServerPolicyNameRule()
 
 	for _, test := range tests {
 		t.Run(test.Name, func(t *testing.T) {
