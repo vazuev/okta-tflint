@@ -1,4 +1,3 @@
-//module github.com/terraform-linters/tflint-ruleset-template
 module github.com/vazuev/okta-tflint
 
 go 1.20
